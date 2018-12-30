@@ -1,0 +1,152 @@
+.main-content {
+  padding: 30px;
+}
+
+.card {
+  width: 100%;
+  height: 200px;
+  background-color: #23313d;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 1px 4px 2px #c1c1c1;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.card>img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+.card-design {
+  margin-bottom: 15px;
+}
+
+#full-screen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.88);
+}
+.closeFullScreen{
+  width: 70%;
+  height: 70%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  text-align: right;
+  transform: translate(-50%, -50%);
+}
+.fa.fa-window-close{
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+#photoViewer {
+  width: 70%;
+  height: 70%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9;
+  transform: translate(-50%, -50%);
+}
+.body-noScroll{
+  position: fixed;
+  width:100%;
+  height: 100%;
+  overflow: hidden;
+}
+.navbar.navbar-light{
+  padding-left: 30px;
+}
+@media only screen and (max-width:1400px) {
+  .card {
+    width: 100%;
+    height: 100%;
+    background-color: #23313d;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 1px 4px 2px #c1c1c1;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card>img {
+    position: relative;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    transform: none;
+    -moz-transform: none;
+    -webkit-transform: none;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .carousel-inner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .carousel-inner img{
+    width:100%;
+  }
+  #photoViewer {
+    width: 100%;
+  }
+  .closeFullScreen {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0 auto;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      text-align: right;
+      transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape) {
+  #photoViewer {
+      width: 100%;
+      height: 70%;
+      overflow: hidden;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 9;
+      transform: translate(-50%, -50%);
+  }
+  .closeFullScreen {
+      width: 100%;
+      height: 70%;
+      overflow: hidden;
+      margin: 0 auto;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      text-align: right;
+      transform: translate(-50%, -50%);
+  }
+  .fa.fa-window-close {
+      color: #fff;
+      font-size: 25px;
+      cursor: pointer;
+      margin-right: 10px;
+  }
+}
